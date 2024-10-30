@@ -62,6 +62,7 @@ from sklearn.metrics import zero_one_loss
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import MyDecisionTreeMelonClassifier
 from sklearn.utils import check_array
 
 # Memoize the data extraction and memory map the resulting
@@ -106,6 +107,7 @@ ESTIMATORS = {
     "ExtraTrees": ExtraTreesClassifier(n_estimators=20),
     "RandomForest": RandomForestClassifier(n_estimators=20),
     "CART": DecisionTreeClassifier(min_samples_split=5),
+    "Melon": MyDecisionTreeMelonClassifier(min_samples_split=5),
     "SGD": SGDClassifier(alpha=0.001),
     "GaussianNB": GaussianNB(),
     "liblinear": LinearSVC(loss="l2", penalty="l2", C=1000, dual=False, tol=1e-3),

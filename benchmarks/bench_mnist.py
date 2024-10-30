@@ -46,6 +46,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import MyDecisionTreeMelonClassifier
 from sklearn.utils import check_array
 
 # Memoize the data extraction and memory map the resulting
@@ -80,6 +81,7 @@ def load_data(dtype=np.float32, order="F"):
 ESTIMATORS = {
     "dummy": DummyClassifier(),
     "CART": DecisionTreeClassifier(),
+    "Melon": MyDecisionTreeMelonClassifier(),
     "ExtraTrees": ExtraTreesClassifier(),
     "RandomForest": RandomForestClassifier(),
     "Nystroem-SVM": make_pipeline(

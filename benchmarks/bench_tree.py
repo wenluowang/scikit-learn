@@ -43,6 +43,22 @@ def bench_scikit_tree_classifier(X, Y):
 
     scikit_classifier_results.append(delta.seconds + delta.microseconds / mu_second)
 
+def bench_scikit_melon_tree_classifier(X, Y):
+    """Benchmark with scikit-learn decision tree classifier"""
+
+    from sklearn.tree import MyDecisionTreeMelonClassifier
+
+    gc.collect()
+
+    # start time
+    tstart = datetime.now()
+    clf = MyDecisionTreeMelonClassifier()
+    clf.fit(X, Y).predict(X)
+    delta = datetime.now() - tstart
+    # stop time
+
+    scikit_classifier_results.append(delta.seconds + delta.microseconds / mu_second)
+
 
 def bench_scikit_tree_regressor(X, Y):
     """Benchmark with scikit-learn decision tree regressor"""

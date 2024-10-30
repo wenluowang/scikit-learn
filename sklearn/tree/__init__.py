@@ -6,6 +6,7 @@
 from ._classes import (
     BaseDecisionTree,
     DecisionTreeClassifier,
+    MyDecisionTreeMelonClassifier,
     DecisionTreeRegressor,
     ExtraTreeClassifier,
     ExtraTreeRegressor,
@@ -15,6 +16,7 @@ from ._export import export_graphviz, export_text, plot_tree
 __all__ = [
     "BaseDecisionTree",
     "DecisionTreeClassifier",
+    "MyDecisionTreeMelonClassifier",
     "DecisionTreeRegressor",
     "ExtraTreeClassifier",
     "ExtraTreeRegressor",

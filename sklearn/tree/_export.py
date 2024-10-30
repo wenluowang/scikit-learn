@@ -15,6 +15,7 @@ from ..base import is_classifier
 from ..utils._param_validation import HasMethods, Interval, StrOptions, validate_params
 from ..utils.validation import check_array, check_is_fitted
 from . import DecisionTreeClassifier, DecisionTreeRegressor, _criterion, _tree
+from . import MyDecisionTreeMelonClassifier, DecisionTreeRegressor, _criterion, _tree
 from ._reingold_tilford import Tree, buchheim
 
 
@@ -70,7 +71,7 @@ SENTINEL = Sentinel()
 
 @validate_params(
     {
-        "decision_tree": [DecisionTreeClassifier, DecisionTreeRegressor],
+        "decision_tree": [DecisionTreeClassifier,MyDecisionTreeMelonClassifier, DecisionTreeRegressor],
         "max_depth": [Interval(Integral, 0, None, closed="left"), None],
         "feature_names": ["array-like", None],
         "class_names": ["array-like", "boolean", None],
@@ -971,7 +972,7 @@ def _compute_depth(tree, node):
 
 @validate_params(
     {
-        "decision_tree": [DecisionTreeClassifier, DecisionTreeRegressor],
+        "decision_tree": [DecisionTreeClassifier,MyDecisionTreeMelonClassifier, DecisionTreeRegressor],
         "feature_names": ["array-like", None],
         "class_names": ["array-like", None],
         "max_depth": [Interval(Integral, 0, None, closed="left"), None],

@@ -59,6 +59,7 @@ from ..preprocessing import OneHotEncoder
 from ..tree import (
     BaseDecisionTree,
     DecisionTreeClassifier,
+    MyDecisionTreeMelonClassifier,
     DecisionTreeRegressor,
     ExtraTreeClassifier,
     ExtraTreeRegressor,

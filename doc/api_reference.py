@@ -1134,6 +1134,7 @@ API_REFERENCE = {
                 "title": None,
                 "autosummary": [
                     "DecisionTreeClassifier",
+                    "MyDecisionTreeMelonClassifier",
                     "DecisionTreeRegressor",
                     "ExtraTreeClassifier",
                     "ExtraTreeRegressor",

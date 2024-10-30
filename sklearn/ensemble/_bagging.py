@@ -15,7 +15,7 @@ import numpy as np
 
 from ..base import ClassifierMixin, RegressorMixin, _fit_context
 from ..metrics import accuracy_score, r2_score
-from ..tree import DecisionTreeClassifier, DecisionTreeRegressor
+from ..tree import DecisionTreeClassifier,MyDecisionTreeMelonClassifier, DecisionTreeRegressor
 from ..utils import (
     Bunch,
     _safe_indexing,

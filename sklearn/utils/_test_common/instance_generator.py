@@ -161,7 +161,7 @@ from sklearn.semi_supervised import (
     SelfTrainingClassifier,
 )
 from sklearn.svm import SVC, SVR, LinearSVC, LinearSVR, NuSVC, NuSVR, OneClassSVM
-from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from sklearn.tree import DecisionTreeClassifier,MyDecisionTreeMelonClassifier, DecisionTreeRegressor
 from sklearn.utils import all_estimators
 from sklearn.utils._testing import SkipTest
 
@@ -502,6 +502,13 @@ PER_ESTIMATOR_CHECK_PARAMS: dict = {
         ]
     },
     DecisionTreeClassifier: {
+        "check_sample_weight_equivalence": [
+            dict(criterion="gini"),
+            dict(criterion="log_loss"),
+            dict(criterion="entropy"),
+        ]
+    },
+    MyDecisionTreeMelonClassifier: {
         "check_sample_weight_equivalence": [
             dict(criterion="gini"),
             dict(criterion="log_loss"),
